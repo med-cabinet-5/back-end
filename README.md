@@ -3,7 +3,7 @@
 ## Team:
 - UI: Stephen Gary
 - React1:  Kennith Howe and Danika Thomson
-- React2: K Parrish
+- React2: KP Parrish
 - Backend: Lexie Jiang
 - Data Engineer:  Mikio Harman, Jan Jaap de Jong, David Vollendroff and Nicole Williams
 - Project Lead: Vinni Hoke
