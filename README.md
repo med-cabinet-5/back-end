@@ -59,10 +59,10 @@ Use user data along with strain data to build ML models to guide recommendations
     - Express – Backend
     - Node – Backend
     - API for strains
-        - https://rapidapi.com/raygorodskij/api/Strain - Dylan
-        - https://otreeba.com/ (needs key) - Michelle
-        - https://kushyapp.github.io/kushy-api-docs/public/ - Nisha
-        - Kaggle Dataset (both versions) - Bhavani & Ira
+        - https://rapidapi.com/raygorodskij/api/Strain
+        - https://otreeba.com/ (needs key)
+        - https://kushyapp.github.io/kushy-api-docs/public/
+        - Kaggle Dataset (both versions)
 
 - Do APIs require you to contact its maintainer to gain access?
 
