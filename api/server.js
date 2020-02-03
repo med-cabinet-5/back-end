@@ -22,7 +22,7 @@ server.use('/api/user', authenticate, usersRouter);
 // });
 
 server.get('/', (req, res) => {
-    res.sendStatus(200);
+    res.sendStatus(200).json({ message: "ARJGJKSDHFKJSDHFSDHG. It's alive!!!!!!! THE API IS ONLINE." });
 });
 
 module.exports = server;
