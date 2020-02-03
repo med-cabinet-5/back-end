@@ -27,9 +27,9 @@ function remove(id) {
 };
 
 async function add(user) {
-    return await db('users')
-        .insert(user)
-        .returning('*');
+    const [id] = await db('users').insert(user);
+  
+    return findById(id);
 };
 
 module.exports = {

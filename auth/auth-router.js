@@ -50,3 +50,28 @@ router.post('/register', (req, res) => {
   });
   
   module.exports = router;
+
+
+/* 
+
+Lexie first-made account: 
+{
+	"first_name":"Lexie",
+	"last_name": "Jiang",
+	"username": "Paimon",
+	"email": "lexiejiang@yahoo.com",
+	"password": "allhails8n"
+}
+
+Login:
+{
+	"username": "Paimon",
+	"password": "allhails8n"
+}
+
+returned
+{
+    "message": "Welcome back, Paimon!",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJ1c2VybmFtZSI6IlBhaW1vbiIsImlhdCI6MTU4MDc1NjI3NywiZXhwIjoxNTgwODQyNjc3fQ.jwcMECgnrpcVFN2lcog2im2JQALM4anVCPp-GEpxys8"
+}
+*/
