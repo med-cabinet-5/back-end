@@ -1,12 +1,12 @@
 # Welcome to Med Cabinet (Feb 3, 2020 - Lambda Build Week)!
 
 ## Team:
-UI: Stephen Gary // 
-React1:  Kennith Howe// 
-React2: K Parrish and Danike Thomson // 
-Backend: Lexie Jiang // 
-Data Engineer:  Mikio Harman, Jan Jaap de Jong and David Vollendroff// 
-Project Lead: Vinni Hoke
+- UI: Stephen Gary // 
+- React1:  Kennith Howe// 
+- React2: K Parrish and Danike Thomson // 
+- Backend: Lexie Jiang // 
+- Data Engineer:  Mikio Harman, Jan Jaap de Jong and David Vollendroff// 
+- Project Lead: Vinni Hoke
 
 ## Proposal:
 
@@ -123,6 +123,15 @@ Follow these steps to set up and work on your project:
 1. User creation and login
 2. Strain recommender
 3. Save recommendations
+
+## Minimum Viable Product for Backend (Lexie)
+
+Implement an User Authentication System. Hash user's passwords before saving them to the database. Use `JSON Web Tokens` or `Sessions and Cookies` to persist authentication across requests.
+
+- [ ] Implement the `register` and `login` functionality. A `user` has `username` and `password`. Both properties are required.
+- [ ] Implement the `authenticate` middleware.
+- [ ] Implement endpoint for retrieving and accessing strains.
+- [ ] Write a **minimum of 2 tests** per API endpoint. Write more tests if you have time.
 
 
 ## STRETCH GOALS 💪
