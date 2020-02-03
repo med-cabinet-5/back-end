@@ -1,14 +1,5 @@
 const db = require('../database/dbConfig');
 
-module.exports = {
-    getAll,
-    findBy,
-    findById,
-    update,
-    remove,
-    add
-};
-
 const getAll = () => {
     return db('users');
 };
@@ -39,4 +30,13 @@ async function add(user) {
     return await db('users')
         .insert(user)
         .returning('*');
+};
+
+module.exports = {
+    getAll,
+    findBy,
+    findById,
+    update,
+    remove,
+    add
 };
