@@ -4,9 +4,9 @@
   "description": "API for Med Cabinet (Build Week Feb 6)",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "cross-env DB_ENV=test jest --watch",
-    "server": "nodemon index.js",
-    "start": "node index.js"
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
