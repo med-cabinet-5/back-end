@@ -1,11 +1,11 @@
 # Welcome to Med Cabinet (Feb 3, 2020 - Lambda Build Week)!
 
 ## Team:
-- UI: Stephen Gary // 
-- React1:  Kennith Howe// 
-- React2: K Parrish and Danike Thomson // 
-- Backend: Lexie Jiang // 
-- Data Engineer:  Mikio Harman, Jan Jaap de Jong and David Vollendroff// 
+- UI: Stephen Gary
+- React1:  Kennith Howe and Danika Thomson
+- React2: K Parrish
+- Backend: Lexie Jiang
+- Data Engineer:  Mikio Harman, Jan Jaap de Jong, David Vollendroff and Nicole Williams
 - Project Lead: Vinni Hoke
 
 ## Proposal:
