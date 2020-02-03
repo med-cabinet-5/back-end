@@ -133,6 +133,12 @@ Implement an User Authentication System. Hash user's passwords before saving the
 - [ ] Implement endpoint for retrieving and accessing strains.
 - [ ] Write a **minimum of 2 tests** per API endpoint. Write more tests if you have time.
 
+### Node Rubric for Lexie (3's)
+
+- [ ] Student incorporated service interfaces and appropriate repositories for code reuse and deployed the API to a hosting platform. The API is configured to dynamically load configuration and secrets using environment variables.
+- [ ] Student migrated from SQLite3 to use a server RDBMS, like Postgres or MySQL and incorporated seeding scripts in their solution.
+- [ ] Student added authorization and authentication services.
+- [ ] The project has end to end tests using a test database.
 
 ## STRETCH GOALS 💪
 
