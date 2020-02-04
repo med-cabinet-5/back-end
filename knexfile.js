@@ -18,7 +18,7 @@ module.exports = {
       directory: './database/seeds' 
     },
   },
-  testing: {
+  test: {
     client: 'sqlite3',
     connection: { 
       filename: './database/medcab-test.db3' 
