@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 // PUT - update user by ID
 router.put('/:id', (req, res) => {
-    Users.update(res.params.id, req.body)
+    Users.update(req.params.id, req.body)
         .then(user => {
             if(user) {
                 res.status(200).json({

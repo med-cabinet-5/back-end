@@ -20,10 +20,19 @@ exports.up = function (knex) {
             tbl.string('password', 128)
                 .notNullable();
 
-        });
+        })
+        .createTable('strains', tbl => {
+            tbl.increments('id');
+
+            tbl.string('strain', 128)
+                .unique()
+                .notNullable();
+
+        })
 };
 
 exports.down = function (knex) {
     return knex.schema
+        .dropTableIfExists('strains')
         .dropTableIfExists('users');
 };
