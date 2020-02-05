@@ -29,6 +29,31 @@ exports.up = function (knex) {
                 .notNullable();
 
         })
+        .createTable('recommendations', tbl => {
+            tbl.datetime('created_at')
+                .defaultTo(knex.fn.now())
+                .notNullable();
+
+            tbl.datetime('updated_at')
+                .defaultTo(knex.fn.now())
+                .notNullable();
+
+            tbl.integer('user_id')
+                .unsigned()
+                .notNullable()
+                .references('id')
+                .inTable('users')
+                .onUpdate('CASCADE')
+                .onDelete('CASCADE');
+
+            tbl.integer('strain_id')
+                .unsigned()
+                .notNullable()
+                .references('id')
+                .inTable('strains')
+                .onUpdate('CASCADE')
+                .onDelete('RESTRICT');
+        })
         .createTable('savedstrains', tbl => {
             tbl.increments('approved_id');
 
