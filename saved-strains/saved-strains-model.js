@@ -4,13 +4,17 @@ const find = () => {
     return db('savedstrains');
 };
 
-const findBy = property => {
-    return db('savedstrains')
-        .where(property)
-};
+// const findBy = property => {
+//     return db('savedstrains')
+//         .where(property)
+// };
 
 function add(strain) {
-    return db('savedstrains').insert(strain).returning('*');
+    console.log(strain);
+
+    return db('savedstrains')
+        .insert(strain)
+        .returning('*');
 };
 
 function remove(id) {
@@ -21,7 +25,6 @@ function remove(id) {
 
 module.exports = {
     find,
-    findBy,
     add,
     remove
 };
