@@ -2,10 +2,17 @@ const router = require('express').Router();
 
 const Saved = require('./saved-strains-model');
 
+// ITS WORKINGGGGG ITS WORKINGGGG
 // GET - retrieve all the saved strains from recommendations
-router.get('/', (req, res) => {
+router.get('/user/:id', (req, res) => {
+    const id = req.params.id;
+
+    console.log(req, req.params);
+
     Saved.find()
         .then(strains => {
+            strains.user_id = id;
+
             res.status(200).json(strains)
         })
         .catch(err => {
@@ -15,8 +22,14 @@ router.get('/', (req, res) => {
         })
 });
 
+
+// ITS WORKINGGGGG ITS WORKINGGGG
 // POST - add rec strain to saved list
-router.post('/', (req, res) => {
+router.post('/user/:id', (req, res) => {
+    const id = req.params.id;
+
+    req.body.user_id = id;
+
     Saved.add(req.body)
         .then(strain => {
             res.status(201).json(strain)
@@ -31,10 +44,15 @@ router.post('/', (req, res) => {
 });
 
 // DELETE - remove saved rec strain from list
-router.remove('/:id', (req, res) => {
-    Users
-        .remove(req.params.id)
+router.delete('/user/:id/:kush', (req, res) => {
+    const id = req.params.id;
+
+    req.body.user_id = id;
+
+    Saved
+        .remove(req.params.kush)
         .then(count => {
+
             if (count > 0) {
                 res.status(200).json({ 
                     message: 'The saved strain has been deleted.' 
