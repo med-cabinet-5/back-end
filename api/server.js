@@ -17,12 +17,8 @@ server.use('/api/auth', authRouter);
 server.use('/api/user', authenticate, usersRouter);
 server.use('/api/strains', authenticate, strainsRouter);
 
-// server.get("/", (req, res) => {
-//     res.send.status(200)({ message: "ARJGJKSDHFKJSDHFSDHG. It's alive!!!!!!! THE API IS ONLINE." });
-// });
-
 server.get('/', (req, res) => {
-    res.sendStatus(200).json({ message: "ARJGJKSDHFKJSDHFSDHG. It's alive!!!!!!! THE API IS ONLINE." });
+    res.status(200).json({ message: "ARJGJKSDHFKJSDHFSDHG. It's alive!!!!!!! THE API IS ONLINE." });
 });
 
 module.exports = server;

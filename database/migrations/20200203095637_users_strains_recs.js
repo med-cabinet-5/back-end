@@ -17,13 +17,22 @@ exports.up = function (knex) {
                 .unique()
                 .notNullable();
 
-            tbl.string('password', 128)
+            tbl.string('password', 400)
                 .notNullable();
 
-        });
+        })
+        .createTable('strains', tbl => {
+            tbl.increments('id');
+
+            tbl.string('strain', 128)
+                .unique()
+                .notNullable();
+
+        })
 };
 
 exports.down = function (knex) {
     return knex.schema
+        .dropTableIfExists('strains')
         .dropTableIfExists('users');
 };
