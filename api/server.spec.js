@@ -10,7 +10,6 @@ describe('server.js', () => {
             const response = await request(server).get('/');
 
             expect(response.status).toEqual(expectedStatusCode);
-
         });
 
         it('This should return a JSON object from the index route.', async () => {
