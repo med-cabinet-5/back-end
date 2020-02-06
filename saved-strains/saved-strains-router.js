@@ -43,6 +43,7 @@ router.post('/user/:id', (req, res) => {
         });
 });
 
+// ITS WORKING ITS WORKING
 // DELETE - remove saved rec strain from list
 router.delete('/user/:id/:kush', (req, res) => {
     const id = req.params.id;
