@@ -32,7 +32,10 @@ router.post('/user/:id', (req, res) => {
 
     Saved.add(req.body)
         .then(strain => {
-            res.status(201).json(strain)
+            res.status(201).json({
+                message: 'Successfully added the new strain.',
+                strain
+            })
         })
         .catch(err => {
             console.log(err);

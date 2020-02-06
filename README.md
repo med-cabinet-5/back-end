@@ -1,5 +1,9 @@
 # Welcome to Med Cabinet (Feb 3, 2020 - Lambda Build Week)!
 
+## DOCUMENTATION FOR BACKEND - PUBLISHED POSTMAN DOCS
+
+https://documenter.getpostman.com/view/10064550/SWTHYu5a
+
 ## Team:
 - UI: Stephen Gary
 - React1:  Kennith Howe and Danika Thomson
@@ -139,6 +143,11 @@ Implement an User Authentication System. Hash user's passwords before saving the
 - [ ] Student migrated from SQLite3 to use a server RDBMS, like Postgres or MySQL and incorporated seeding scripts in their solution.
 - [ ] Student added authorization and authentication services.
 - [ ] The project has end to end tests using a test database.
+
+
+# POSTMAN Documentation
+
+https://documenter.getpostman.com/view/10064550/SWTHYu5a
 
 ## STRETCH GOALS 💪
 
