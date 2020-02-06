@@ -11,8 +11,8 @@ describe('successful registration process', () => {
             .send({
                 "first_name": "John",
                 "last_name": "Smith",
-                "username": "appleman",
-                "email": "johnsmith@medcab.com",
+                "username": "jsmithyyyy",
+                "email": "johnsmith420@medcab.com",
                 "password": "apple420"
             })
         expect(res.statusCode).toEqual(201);
@@ -23,8 +23,8 @@ describe('successful registration process', () => {
             .send({
                 "first_name": "John",
                 "last_name": "Smith",
-                "username": "appleman",
-                "email": "johnsmith@medcab.com",
+                "username": "jsmithyyyy",
+                "email": "johnsmith420@medcab.com",
                 "password": "apple420"
             })
         expect(res.type).toMatch(/json/i);
@@ -35,7 +35,7 @@ describe('when users successfully login', () => {
     it('status code should be 200', async () => {
         const res = await request(server).post('/api/auth/login')
             .send({
-                "username": "appleman",
+                "username": "jsmithyyyy",
                 "password": "apple420"
             })
         expect(res.statusCode).toEqual(200);
@@ -44,9 +44,22 @@ describe('when users successfully login', () => {
     it('response should be in JSON format', async () => {
         const res = await request(server).post('/api/auth/login')
             .send({
-                "username": "appleman",
+                "username": "jsmithyyyy",
                 "password": "apple420"
             })
         expect(res.type).toMatch(/json/i);
     });
+    it('should return token and user info', function() {
+        return request(server)
+            .post('/api/auth/login')
+            .send({
+                "username": "jsmithyyyy",
+                "password": "apple420"
+            })
+            .then(res => {
+                // expect(res.body.username).toEqual('jsmithyyy');
+                expect(res.body.token).toBeDefined();
+                // token = res.body.token;
+            })
+    })
 });
