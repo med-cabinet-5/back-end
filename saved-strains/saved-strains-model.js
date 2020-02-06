@@ -17,6 +17,15 @@ function add(strain) {
         .returning('*');
 };
 
+
+// for testing
+// function add(strain) {
+//     console.log(strain);
+
+//     return db('savedstrains')
+//         .insert(strain);
+// };
+
 function remove(id) {
     return db('savedstrains')
         .delete()
