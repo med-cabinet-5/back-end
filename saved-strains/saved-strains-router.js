@@ -32,7 +32,10 @@ router.post('/user/:id', (req, res) => {
 
     Saved.add(req.body)
         .then(strain => {
-            res.status(201).json(strain)
+            res.status(201).json({
+                message: 'Successfully added the new strain.',
+                strain
+            })
         })
         .catch(err => {
             console.log(err);
@@ -43,6 +46,7 @@ router.post('/user/:id', (req, res) => {
         });
 });
 
+// ITS WORKING ITS WORKING
 // DELETE - remove saved rec strain from list
 router.delete('/user/:id/:kush', (req, res) => {
     const id = req.params.id;
