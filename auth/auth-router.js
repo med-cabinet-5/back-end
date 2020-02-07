@@ -16,7 +16,10 @@ router.post('/register', (req, res) => {
     if(validateRes.isSuccessful === true){
       Users.add(user)
         .then(saved => {
-          res.status(201).json(saved);
+          res.status(201).json({
+            message: "Successfully registered new user!",
+            saved
+          });
         })
         .catch(error => {
           res.status(500).json(error.message);
@@ -38,7 +41,11 @@ router.post('/register', (req, res) => {
         // check that passwords match
         if (user && bcrypt.compareSync(password, user.password)) {
           const token = generateToken(user);
-          res.status(200).json({ message: `Welcome back, ${user.username}!`, token });
+          res.status(200).json({ 
+            message: `Welcome back, ${user.username}!`, 
+            user, 
+            token 
+          });
         } else {
           // return 401 if the password or username are invalid
           res.status(401).json({ message: 'Invalid credentials!' });
